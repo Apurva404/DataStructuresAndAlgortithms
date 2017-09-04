@@ -12,28 +12,16 @@ public class InsertionSort extends AbstractSort{
     public int[] sort() {
         int arraySize = a.length;
 
-        if(sortingOrder == 1){
-            for (int j = 1; j < arraySize; j++) {
-                int key = a[j];
-                int i = j-1;
-                while (i>=0 && a[i]> key){
-                    a[i+1] = a[i];
-                    i--;
-                }
-                a[i+1] = key;
+        for (int i = 1; i < arraySize; i++) {
+            int key = a[i];
+            int j = i - 1;
+            while ((j >= 0) && ((sortingOrder == 1) ? (a[j] > key) : (a[j] < key))) {
+                a[j+1] = a[j];
+                j--;
             }
+            a[j+1] = key;
         }
-        else{
-            for (int j = 1; j < arraySize; j++) {
-                int key = a[j];
-                int i = j-1;
-                while (i>=0 && a[i]< key){
-                    a[i+1] = a[i];
-                    i--;
-                }
-                a[i+1] = key;
-            }
-        }
+
         return a;
     }
 }
