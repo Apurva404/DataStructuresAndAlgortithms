@@ -30,23 +30,30 @@ public class SortingTest {
         System.out.println(" Enter 2 for descending order");
         int sortingOrder = in.nextInt();
 
-//        //Insertion Sort
-//        InsertionSort iArray = new InsertionSort(numberArray, sortingOrder);
-//        iArray.sort();
-//        if(sortingOrder == 1){
-//            System.out.println("Sorted Array in ascending order using Insertion Sort):");
-//            iArray.displayArray();
-//        }
-//        else{
-//            System.out.println("Sorted Array in descending order using Insertion Sort :");
-//            iArray.displayArray();
-//        }
+        //Insertion Sort
+        InsertionSort iArray = new InsertionSort(numberArray, sortingOrder);
+        iArray.sort();
+        if(sortingOrder == 1){
+            System.out.println("Sorted Array in ascending order using Insertion Sort:");
+            iArray.displayArray();
+        }
+        else{
+            System.out.println("Sorted Array in descending order using Insertion Sort :");
+            iArray.displayArray();
+        }
 
         //Merge Sort
         MergeSort mArray = new MergeSort(numberArray,sortingOrder);
         mArray.sort();
-        System.out.println("Sorted Array using Merge Sort):");
+        System.out.println("Sorted Array using Merge Sort:");
         mArray.displayArray();
+
+        //Selection Sort
+        SelectionSort sArray = new SelectionSort(numberArray,sortingOrder);
+        sArray.sort();
+        System.out.println("Sorted Array using Selection Sort:");
+        sArray.displayArray();
+
 
     }
 }
