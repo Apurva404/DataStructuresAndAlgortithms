@@ -4,40 +4,36 @@ package com.apurva.algorithms;
  * Created by Apurva on 8/29/2017.
  */
 public class InsertionSort extends AbstractSort{
-    public InsertionSort(int arrayIn[]){
-        super(arrayIn);
+
+    public InsertionSort(int arrayIn[], int sortingOrderIn){
+        super(arrayIn, sortingOrderIn);
     }
 
-    public int[] sortInIncreasingOrder() {
+    public int[] sort() {
         int arraySize = a.length;
 
-        for (int j = 1; j < arraySize; j++) {
-            int key = a[j];
-            int i = j-1;
-            while (i>=0 && a[i]> key){
-                a[i+1] = a[i];
-                i--;
+        if(sortingOrder == 1){
+            for (int j = 1; j < arraySize; j++) {
+                int key = a[j];
+                int i = j-1;
+                while (i>=0 && a[i]> key){
+                    a[i+1] = a[i];
+                    i--;
+                }
+                a[i+1] = key;
             }
-            a[i+1] = key;
+        }
+        else{
+            for (int j = 1; j < arraySize; j++) {
+                int key = a[j];
+                int i = j-1;
+                while (i>=0 && a[i]< key){
+                    a[i+1] = a[i];
+                    i--;
+                }
+                a[i+1] = key;
+            }
         }
         return a;
     }
-
-    public int[] sortInDecreasingOrder() {
-        int j = 0;
-        int arraySize = a.length;
-
-        for (j = 1; j < arraySize; j++) {
-            int key = a[j];
-            int i = j-1;
-            while (i>=0 && a[i]< key){
-                a[i+1] = a[i];
-                i--;
-            }
-            a[i+1] = key;
-        }
-        return a;
-    }
-
-
 }

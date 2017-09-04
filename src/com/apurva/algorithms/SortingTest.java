@@ -24,14 +24,29 @@ public class SortingTest {
             }
         }
 
-        InsertionSort integerArray = new InsertionSort(numberArray);
-        integerArray.sortInIncreasingOrder();
-        System.out.println("Sorted Array in ascending order :");
-        integerArray.displayArray();
-        integerArray.sortInDecreasingOrder();
-        System.out.println("Sorted Array in descending order :");
-        integerArray.displayArray();
+        in.nextLine();
+        System.out.println("Enter the order in which you want to sort the array:");
+        System.out.println(" Enter 1 for ascending order");
+        System.out.println(" Enter 2 for descending order");
+        int sortingOrder = in.nextInt();
 
+//        //Insertion Sort
+//        InsertionSort iArray = new InsertionSort(numberArray, sortingOrder);
+//        iArray.sort();
+//        if(sortingOrder == 1){
+//            System.out.println("Sorted Array in ascending order using Insertion Sort):");
+//            iArray.displayArray();
+//        }
+//        else{
+//            System.out.println("Sorted Array in descending order using Insertion Sort :");
+//            iArray.displayArray();
+//        }
+
+        //Merge Sort
+        MergeSort mArray = new MergeSort(numberArray,sortingOrder);
+        mArray.sort();
+        System.out.println("Sorted Array using Merge Sort):");
+        mArray.displayArray();
 
     }
 }

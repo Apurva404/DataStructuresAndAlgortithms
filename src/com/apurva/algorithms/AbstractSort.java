@@ -5,18 +5,18 @@ package com.apurva.algorithms;
  */
 public abstract class AbstractSort {
     protected int [] a;
+    protected int sortingOrder;
 
-    public AbstractSort(int arrayIn[]){
+    public AbstractSort(int arrayIn[], int sortingOrderIn){
         a = arrayIn;
+        sortingOrder = sortingOrderIn;
     }
 
     public void setArray(int numberArray[]){
         a = numberArray;
     }
 
-    public abstract int[] sortInIncreasingOrder();
-
-    public abstract int[] sortInDecreasingOrder();
+    public abstract int[] sort();
 
     public void displayArray(){
         for (int i=0; i < a.length; i++){
