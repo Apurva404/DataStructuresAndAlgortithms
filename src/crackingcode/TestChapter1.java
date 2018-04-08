@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class TestChapter1 {
     public static void main(String [] args){
 
-        //to check if a String has all unique characters or not
+       //to check if a String has all unique characters or not
         Scanner s1 = new Scanner(System.in);
         StringHasUniqueCharacter s = new StringHasUniqueCharacter();
         System.out.println("Enter you string: ");
@@ -37,6 +37,24 @@ public class TestChapter1 {
         RemoveDuplicateFromString rs = new RemoveDuplicateFromString();
         stringWithoutDuplicates = rs.removeDuplicate(stringWithDuplicates);
         System.out.println("Your string without duplicates is:"+ new String(stringWithoutDuplicates));
+
+        //to check if two string are anagram
+        Scanner s4 = new Scanner(System.in);
+        System.out.println("Enter your first string:");
+        String firstString = s4.next();
+        char[] firstCharArray = firstString.toCharArray();
+
+        Scanner s5 = new Scanner(System.in);
+        System.out.println("Enter your second string:");
+        String secondString = s5.next();
+        char[] secondCharArray = secondString.toCharArray();
+
+        AnagramString checkString = new AnagramString();
+        boolean result= checkString.isAnagram(firstCharArray,secondCharArray);
+        if(result)
+            System.out.println("The strings are anagram");
+        else
+            System.out.println("The strings are not anagram");
 
     }
 }
