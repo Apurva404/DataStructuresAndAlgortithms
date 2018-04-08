@@ -26,6 +26,17 @@ public class TestChapter1 {
 
         reversedString = r.reverseString(inputString.toCharArray());
         System.out.println("The reverse of string is:" + reversedString);
-    }
 
+        //to remove duplicate from string in place
+        Scanner s3 = new Scanner(System.in);
+        System.out.println("Enter you string to remove duplicates:");
+        char[] stringWithoutDuplicates;
+        String userInput = s3.next();
+        char [] stringWithDuplicates = userInput.toCharArray();
+        System.out.println("Your string with duplicates is:"+ new String(stringWithDuplicates));
+        RemoveDuplicateFromString rs = new RemoveDuplicateFromString();
+        stringWithoutDuplicates = rs.removeDuplicate(stringWithDuplicates);
+        System.out.println("Your string without duplicates is:"+ new String(stringWithoutDuplicates));
+
+    }
 }
