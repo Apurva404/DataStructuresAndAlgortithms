@@ -89,6 +89,30 @@ public class TestChapter1 {
             System.out.println(" ");
         }
 
-    }
+        //update rows and columns of a matrxi having an element as 0
+        System.out.println("Enter the size(N) of the matrix:" );
+        Scanner sizeInput = new Scanner(System.in);
+        int m = sizeInput.nextInt();
+        int[][] matrix1 = new int[m][m];
+        int[][] matrix2 = new int[m][m];
 
+        for(int i=0;i<m;i++){
+            for(int j=0;j<m;j++){
+                Scanner element = new Scanner(System.in);
+                System.out.println("Enter the matrix element at:"+ "(" + i + "," + j+ ")");
+                matrix1[i][j] = element.nextInt();
+            }
+        }
+        UpdateMatrixHavingZero  newMatrix = new UpdateMatrixHavingZero();
+        matrix2=  newMatrix.updateMatrix(matrix1);
+        System.out.println("The updated matrix is:");
+        for(int i=0;i<m;i++){
+            System.out.print("[");
+            for(int j=0;j<m;j++){
+                System.out.print(matrix2[i][j]+",");
+            }
+            System.out.print("]");
+            System.out.println(" ");
+        }
+    }
 }
