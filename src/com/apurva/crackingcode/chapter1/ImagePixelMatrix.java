@@ -1,4 +1,4 @@
-package crackingcode;
+package com.apurva.crackingcode.chapter1;
 
 public class ImagePixelMatrix {
     public int[][] rotateBy90AntiClockwise(int a[][]){

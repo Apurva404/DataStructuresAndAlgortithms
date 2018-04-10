@@ -1,4 +1,4 @@
-package crackingcode;
+package com.apurva.crackingcode.chapter1;
 
 public class RemoveDuplicateFromString {
 

@@ -1,4 +1,4 @@
-package crackingcode;
+package com.apurva.crackingcode.chapter1;
 
 import java.util.Scanner;
 
@@ -77,7 +77,7 @@ public class TestChapter1 {
                 myMatrix[i][j] = matrixElement.nextInt();
             }
         }
-        ImagePixelMatrix  newImageMatrix = new ImagePixelMatrix();
+        ImagePixelMatrix newImageMatrix = new ImagePixelMatrix();
         rotatedMatrix=  newImageMatrix.rotateBy90AntiClockwise(myMatrix);
         System.out.println("The rotated matrix is:");
         for(int i=0;i<n;i++){
@@ -103,7 +103,7 @@ public class TestChapter1 {
                 matrix1[i][j] = element.nextInt();
             }
         }
-        UpdateMatrixHavingZero  newMatrix = new UpdateMatrixHavingZero();
+        UpdateMatrixHavingZero newMatrix = new UpdateMatrixHavingZero();
         matrix2=  newMatrix.updateMatrix(matrix1);
         System.out.println("The updated matrix is:");
         for(int i=0;i<m;i++){
@@ -114,5 +114,18 @@ public class TestChapter1 {
             System.out.print("]");
             System.out.println(" ");
         }
+
+        Scanner userInput7 = new Scanner(System.in);
+        Scanner userInput8 = new Scanner(System.in);
+        System.out.println("Enter your first string:");
+        String string1 = userInput7.next();
+        System.out.println("Enter your second string:");
+        String string2 = userInput8.next();
+        RotatedString newRs = new RotatedString();
+        if(newRs.isRotatedString(string1,string2))
+            System.out.println("String2 is rotated version of String1");
+        else
+            System.out.println("String2 is not a rotated version of String1");
+
     }
 }
