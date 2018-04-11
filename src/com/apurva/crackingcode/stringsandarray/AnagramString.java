@@ -1,4 +1,4 @@
-package com.apurva.crackingcode.chapter1;
+package com.apurva.crackingcode.stringsandarray;
 
 public class AnagramString {
     public boolean isAnagram(char[] a, char[] b){

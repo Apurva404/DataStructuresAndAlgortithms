@@ -1,4 +1,4 @@
-package com.apurva.crackingcode.chapter1;
+package com.apurva.crackingcode.stringsandarray;
 
 public class RotatedString {
     public boolean isRotatedString(String a, String b){

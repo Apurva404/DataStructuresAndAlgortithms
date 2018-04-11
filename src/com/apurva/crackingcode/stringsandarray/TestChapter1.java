@@ -1,4 +1,4 @@
-package com.apurva.crackingcode.chapter1;
+package com.apurva.crackingcode.stringsandarray;
 
 import java.util.Scanner;
 
