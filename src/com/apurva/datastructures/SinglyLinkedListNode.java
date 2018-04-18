@@ -66,7 +66,25 @@ public class SinglyLinkedListNode {
         return 0;
     }
 
-    public int search(int data, SinglyLinkedListNode next){
-        return 0;
+    public void search(int data){
+        int position = -1;
+        if(this!=null){
+            SinglyLinkedListNode n = this;
+            while(n!=null){
+                if(n.data != data){
+                    n= n.next;
+                    position++;
+                }
+                else{
+                    position++;
+                    System.out.println("The data is an element of the linked list at position:" +position);
+                    break;
+                }
+
+            }
+        }
+        else
+            System.out.println("The linked list is empty");
     }
+
 }

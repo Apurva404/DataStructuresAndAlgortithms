@@ -34,7 +34,15 @@ public class Test {
             System.out.println("Enter yes/no if you want to add more nodes:");
             s = userInput1.nextLine();
         }
+        System.out.println("The current elements of current linked list are:");
+        System.out.println("-------------------------------------------------");
         firstNode.display();
+
+        System.out.println("\n Enter the value of the element you want to search in the linked List:");
+        Scanner searchInput = new Scanner(System.in);
+        int searchData = searchInput.nextInt();
+        firstNode.search(searchData);
+
     }
 }
 
