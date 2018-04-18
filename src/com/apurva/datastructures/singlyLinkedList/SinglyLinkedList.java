@@ -82,7 +82,16 @@ public class SinglyLinkedList {
         }
     }
 
-    public void reverse(){
+    public void reverse() {
+        if(head != null){
+            Node cur = head;
+            Node curNext = cur.next();
+            Node curNextNext = curNext.next();
+
+
+        } else {
+            System.out.println("The linked list is empty");
+        }
 
     }
 
