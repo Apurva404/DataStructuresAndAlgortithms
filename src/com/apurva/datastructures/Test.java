@@ -43,6 +43,11 @@ public class Test {
         int searchData = searchInput.nextInt();
         firstNode.search(searchData);
 
+        System.out.println("\n Enter the value of the element you want to delete from the linked List:");
+        Scanner deleteInput = new Scanner(System.in);
+        int deleteData = deleteInput.nextInt();
+        firstNode=firstNode.delete(deleteData);
+        firstNode.display();
     }
 }
 

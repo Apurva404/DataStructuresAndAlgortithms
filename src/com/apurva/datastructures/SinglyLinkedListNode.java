@@ -62,8 +62,28 @@ public class SinglyLinkedListNode {
         }
     }
 
-    public int delete(int data, SinglyLinkedListNode next){
-        return 0;
+    public SinglyLinkedListNode delete(int data){
+        SinglyLinkedListNode firstNode = this;
+        if(this != null){
+            if(this.data ==data) {
+                firstNode = this.next;
+                this.next = null;
+            }
+            else{
+                SinglyLinkedListNode n = this;
+                while(n.next.next!= null ){
+                    if(n.next.data!= data){
+                        n=n.next;
+                    }
+                    else {
+                        n.next = n.next.next;
+                    }
+                }
+
+            }
+        }
+        return firstNode;
+
     }
 
     public void search(int data){
@@ -85,6 +105,12 @@ public class SinglyLinkedListNode {
         }
         else
             System.out.println("The linked list is empty");
+    }
+
+    public void reverse(SinglyLinkedListNode firstNode){
+
+
+
     }
 
 }
