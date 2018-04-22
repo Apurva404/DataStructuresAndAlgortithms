@@ -7,6 +7,8 @@ public class SinglyLinkedList {
         head = null;
     }
 
+
+
     public void display() {
         if (head != null) {
             Node cur = head;
@@ -82,17 +84,25 @@ public class SinglyLinkedList {
         }
     }
 
-    public void reverse() {
-        if(head != null){
-            Node cur = head;
-            Node curNext = cur.next();
-            Node curNextNext = curNext.next();
-
-
-        } else {
-            System.out.println("The linked list is empty");
+    public Node Reverse() {
+        if(head!=null){
+            Node a = head;
+            Node b = head.next();
+            if(b == null){
+                return a;
+            }
+            Node c = head.next().next();
+            a.setNext(null);
+            while(c!=null){
+                b.setNext(a);
+                a = b;
+                b = c;
+                c = c.next();
+            }
+            b.setNext(a);
+            head = b;
         }
-
+        return head;
     }
 
 }

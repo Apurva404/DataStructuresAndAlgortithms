@@ -43,8 +43,19 @@ public class Test {
 
         System.out.println("\nEnter the value of the element you want to delete from the linked List:");
         int deleteData = s.nextInt();
+        s.nextLine();
         list.delete(deleteData);
         list.display();
+
+
+        System.out.println("\nEnter yes(y) to reverse the linked list:");
+        String ans = s.nextLine();
+        if(ans.startsWith("y")){
+            Node newHead = list.Reverse();
+            list.display();
+
+        }
+
     }
 }
 

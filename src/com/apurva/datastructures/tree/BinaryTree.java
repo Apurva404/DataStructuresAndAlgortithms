@@ -45,15 +45,43 @@ public class BinaryTree {
         }
     }
 
-    public void display(){
-        if(root != null){
+    public void inOrderTraversal(){
+        inOrderTraversalRec(this.root);
+    }
 
+    private void inOrderTraversalRec(Node n){
+        if(n!=null){
+            System.out.print("(");
+            inOrderTraversalRec(n.left());
+            System.out.print(")-");
+            System.out.print(n.getData());
+            System.out.print("-(");
+            inOrderTraversalRec(n.right());
+            System.out.print(")");
         }
-        else{
-            System.out.println("The tree is empty");
+    }
+
+    public void preOrderTraversal(){
+        preOrderTraversalRec(this.root);
+    }
+
+    private void preOrderTraversalRec(Node n){
+        if(n!=null){
+            System.out.print(n.getData()+"->");
+            preOrderTraversalRec(n.left());
+            preOrderTraversalRec(n.right());
         }
+    }
+    public void postOrderTraversal(){
+        postOrderTraversalRec(this.root);
 
-       // ((10)-20-(30))-40-(50)
+    }
 
+    private void postOrderTraversalRec(Node n){
+        if(n!=null){
+            postOrderTraversalRec(n.left());
+            postOrderTraversalRec(n.right());
+            System.out.print(n.getData()+"->");
+        }
     }
 }
