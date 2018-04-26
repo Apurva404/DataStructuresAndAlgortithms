@@ -83,6 +83,25 @@ public class SinglyLinkedList {
             System.out.println("The linked list is empty");
         }
     }
+    public void displayInReverse(Node head){
+        if(head!=null){
+            displayInReverseRecursion(head);
+            System.out.print(head.getData());
+
+        }
+        else {
+            System.out.println("The linked is empty");
+        }
+    }
+
+    public void displayInReverseRecursion(Node current){
+        if(current.next()!= null){
+            current = current.next();
+            displayInReverseRecursion(current);
+            System.out.print(current.getData()+ "-> ");
+        }
+
+    }
 
     public Node Reverse() {
         if(head!=null){

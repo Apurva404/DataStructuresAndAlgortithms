@@ -37,24 +37,31 @@ public class Test {
         System.out.println("-------------------------------------------------");
         list.display();
 
-        System.out.println("\nEnter the value of the element you want to search in the linked List:");
-        int searchData = s.nextInt();
-        list.search(searchData);
+//        System.out.println("\nEnter the value of the element you want to search in the linked List:");
+//        int searchData = s.nextInt();
+//        list.search(searchData);
+//
+//        System.out.println("\nEnter the value of the element you want to delete from the linked List:");
+//        int deleteData = s.nextInt();
+//        s.nextLine();
+//        list.delete(deleteData);
+//        list.display();
 
-        System.out.println("\nEnter the value of the element you want to delete from the linked List:");
-        int deleteData = s.nextInt();
-        s.nextLine();
-        list.delete(deleteData);
-        list.display();
-
-
-        System.out.println("\nEnter yes(y) to reverse the linked list:");
-        String ans = s.nextLine();
-        if(ans.startsWith("y")){
-            Node newHead = list.Reverse();
-            list.display();
+        System.out.println("\nEnter yes(y) to display the linked list in reverse");
+        String ans1 = s.nextLine();
+        if(ans1.startsWith("y")){
+            list.displayInReverse(list.head);
 
         }
+
+//
+//        System.out.println("\nEnter yes(y) to reverse the linked list:");
+//        String ans2 = s.nextLine();
+//        if(ans2.startsWith("y")){
+//            Node newHead = list.Reverse();
+//            list.display();
+//
+//        }
 
     }
 }
