@@ -5,8 +5,9 @@ public class Stack {
     int top;
     char[] data;
 
-    public Stack(){
+    public Stack(char[] dataIn){
         top = -1;
+        data = dataIn;
     }
 
     public void push(char a){
