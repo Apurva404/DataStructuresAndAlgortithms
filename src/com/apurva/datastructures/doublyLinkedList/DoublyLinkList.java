@@ -35,7 +35,6 @@ public class DoublyLinkList {
                 tempNode.prev.setNext(tempNode.next);
                 tempNode.next.setPrev(tempNode.prev);
             }
-            tempNode = null;
         }
         else{
             System.out.println("The doubly linked list empty or the node with the data value does not exist");
@@ -59,10 +58,10 @@ public class DoublyLinkList {
         }
     }
 
-    public void insertAfter(int data){
+    public void insertAfter(int data, int insertAfterNodeData){
         if(head!=null){
             Node tempNode = head;
-            if(tempNode.getData()!=data && tempNode!=null){
+            while(tempNode.getData()!=insertAfterNodeData && tempNode!=null){
                 tempNode = tempNode.next;
             }
             Node newNode = new Node(data);

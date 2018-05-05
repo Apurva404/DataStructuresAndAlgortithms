@@ -30,13 +30,15 @@ public class Test {
                         newList.insert(userInput.nextInt());
                         break;
 
-                case 4: System.out.println("Enter the data value of the node:");
-                        userInput.nextLine();
-                        newList.insertAfter(userInput.nextInt());
+                case 4:
+                        System.out.println("Enter the data value of the node:");
+                        int data = userInput.nextInt();
+                        System.out.println("Enter the data value of the node after which you want insert the new node:");
+                        int insertAfter = userInput.nextInt();
+                        newList.insertAfter(data,insertAfter);
                         break;
 
                 case 5: System.out.println("Enter the data value of the node:");
-                        userInput.nextLine();
                         newList.delete(userInput.nextInt());
                         break;
 
