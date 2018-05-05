@@ -14,11 +14,10 @@ public class Test {
             System.out.println("1.Display");
             System.out.println("2.Display in reverse");
             System.out.println("3.Insert");
-            System.out.println("4.Insert at last ");
-            System.out.println("5.Insert After a position");
-            System.out.println("6.Delete");
-            System.out.println("7.Delete last");
-            System.out.println("8.Exit");
+            System.out.println("4.Insert After a particular node");
+            System.out.println("5.Delete");
+            System.out.println("6.Delete last");
+            System.out.println("7.Exit");
             switch(userInput.nextInt()){
                 case 1: newList.display();
                         break;
@@ -33,25 +32,18 @@ public class Test {
 
                 case 4: System.out.println("Enter the data value of the node:");
                         userInput.nextLine();
-                        newList.insert(userInput.nextInt());
+                        newList.insertAfter(userInput.nextInt());
                         break;
 
                 case 5: System.out.println("Enter the data value of the node:");
                         userInput.nextLine();
-                        newList.insert(userInput.nextInt());
+                        newList.delete(userInput.nextInt());
                         break;
 
-                case 6: System.out.println("Enter the data value of the node:");
-                        userInput.nextLine();
-                        newList.insert(userInput.nextInt());
+                case 6: newList.deleteLast();
                         break;
 
-                case 7: System.out.println("Enter the data value of the node:");
-                        userInput.nextLine();
-                        newList.insert(userInput.nextInt());
-                        break;
-
-                case 8: exit(0);
+                case 7: exit(0);
             }
             System.out.println("\nDo you want to continue?:Y or N");
             userInput.nextLine();
