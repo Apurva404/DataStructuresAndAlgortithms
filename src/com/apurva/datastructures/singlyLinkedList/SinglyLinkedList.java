@@ -7,7 +7,13 @@ public class SinglyLinkedList {
         head = null;
     }
 
-
+    public int getHeadData(){
+        int data = -1;
+        if(head!=null){
+            data = head.getData();
+        }
+        return data;
+    }
 
     public void display() {
         if (head != null) {
@@ -44,6 +50,19 @@ public class SinglyLinkedList {
             n.setNext(head);
         }
         head = n;
+    }
+
+    public int deleteHead(){
+        int data=-1;
+        if(head != null){
+            data = head.getData();
+            Node n = head.next();
+            head = n;
+        }
+        else{
+            System.out.println("The list is empty");
+        }
+        return data;
     }
 
     public void delete(int data){
@@ -83,6 +102,7 @@ public class SinglyLinkedList {
             System.out.println("The linked list is empty");
         }
     }
+
     public void displayInReverse(Node head){
         if(head!=null){
             displayInReverseRecursion(head);

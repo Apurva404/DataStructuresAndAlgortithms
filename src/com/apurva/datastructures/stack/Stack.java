@@ -1,5 +1,5 @@
 package com.apurva.datastructures.stack;
-import com.apurva.datastructures.constants.StackConstants;
+import com.apurva.datastructures.constants.Constants;
 
 public class Stack {
     int top;
@@ -38,7 +38,7 @@ public class Stack {
     }
 
     public boolean isFull(){
-        if(top == StackConstants.MAXSIZE)
+        if(top == Constants.MAXSIZE)
             return  true;
         else
             return false;
